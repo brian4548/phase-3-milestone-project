@@ -1,0 +1,2 @@
+class FurnitureWishlist < ApplicationRecord
+end
