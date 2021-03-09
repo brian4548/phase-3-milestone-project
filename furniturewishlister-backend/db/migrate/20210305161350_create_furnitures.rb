@@ -6,8 +6,6 @@ class CreateFurnitures < ActiveRecord::Migration[6.0]
       t.string :category
       t.string :color
       t.string :image
-      t.string :type
-      t.integer :price
       t.integer :user_id
       t.timestamps
     end

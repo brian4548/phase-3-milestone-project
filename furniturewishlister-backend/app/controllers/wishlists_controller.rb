@@ -1,8 +1,7 @@
 class WishlistsController < ApplicationController
     def index
         wishlists = Wishlist.all
-        render json: wishlists
-        # , include: [:furnitures] --- idk why it wont work with thia but it works without it --- 
+        render json: wishlists, include: [:furnitures]
     end
 
     def create
@@ -24,6 +23,6 @@ class WishlistsController < ApplicationController
     private
 
     def wishlist_params
-        params.require(:wishlist).permit(:name, :setting, :user_id)
+        params.require(:wishlist).permit(:name, :season, :occasion, :user_id)
     end
 end

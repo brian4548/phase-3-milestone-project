@@ -1,5 +1,5 @@
 class Furniture < ApplicationRecord
-    
-    has_many :furniturewishlists
-    has_many :wishlists, through: :furniturewishlists
+    belongs_to :user 
+    has_many :wishlist_furnitures
+    has_many :wishlists, through: :wishlist_furnitures
 end

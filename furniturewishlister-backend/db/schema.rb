@@ -18,16 +18,7 @@ ActiveRecord::Schema.define(version: 2021_03_05_220537) do
     t.string "category"
     t.string "color"
     t.string "image"
-    t.string "type"
-    t.integer "price"
     t.integer "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "furniturewishlists", force: :cascade do |t|
-    t.integer "furniture_id"
-    t.integer "wishlist_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -38,9 +29,17 @@ ActiveRecord::Schema.define(version: 2021_03_05_220537) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "wishlist_furnitures", force: :cascade do |t|
+    t.integer "furniture_id"
+    t.integer "wishlist_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "wishlists", force: :cascade do |t|
     t.string "name"
-    t.string "setting"
+    t.string "season"
+    t.string "occasion"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

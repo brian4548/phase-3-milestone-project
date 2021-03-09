@@ -1,14 +1,14 @@
 //READ FUNCTIONS
 
-function viewFurniture(furnitures) {
+function viewfurniture(furnitures) {
     document.getElementById('card-container').innerHTML = ""
     document.getElementById('create-container').innerHTML = ""
     document.getElementById('footer').innerHTML = ""
     let addButton = document.createElement('button')
-        addButton.innerHTML = "Add Furniture Item"
-        addButton.addEventListener('click', () => renderAddFurnitureForm())
+        addButton.innerHTML = "Add furniture Item"
+        addButton.addEventListener('click', () => renderAddfurnitureForm())
     document.getElementById('create-container').append(addButton)
-    furnitures.forEach(renderFurniture)
+    furnitures.forEach(renderfurniture)
     CATEGORIES_ARRAY.forEach(cat => {
         let catButton = document.createElement('button')
             catButton.innerHTML = cat
@@ -17,7 +17,7 @@ function viewFurniture(furnitures) {
     })
 }
 
-function renderFurniture(furniture) {
+function renderfurniture(furniture) {
     let getLocation = document.querySelector("#card-container")
     let div = document.getElementById(`furniture-${furniture.id}`)
     let header = document.createElement("h2")
@@ -32,7 +32,7 @@ function renderFurniture(furniture) {
         paragraph.innerHTML = furniture.color
     let button1 = document.createElement("button")
         button1.innerHTML = "Edit Item"
-        button1.addEventListener('click', () => renderEditFurnitureForm(furniture))
+        button1.addEventListener('click', () => renderEditfurnitureForm(furniture))
     let button2 = document.createElement("button")
         button2.innerHTML = "Delete Item"
         button2.addEventListener('click', () => deleteItem(furniture))
@@ -49,11 +49,11 @@ function renderFurniture(furniture) {
 
 //CREATE FUNCTIONS
 
-function renderAddFurnitureForm() {
+function renderAddfurnitureForm() {
     let container = document.getElementById('create-container')
         container.innerHTML = ""
     let form = document.createElement('form')
-        form.addEventListener('submit', (event) => createFurniture(event))
+        form.addEventListener('submit', (event) => createfurniture(event))
     let name = document.createElement('input')
         name.type = "text"
         name.name = "name"
@@ -90,14 +90,14 @@ function renderAddFurnitureForm() {
     container.append(form)
 }
 
-function createFurniture(event) {
+function createfurniture(event) {
     event.preventDefault()
     document.getElementById('create-container').innerHTML = ""
     let addButton = document.createElement('button')
-        addButton.innerHTML = "Add Furniture Item"
-        addButton.addEventListener('click', () => renderAddFurnitureForm())
+        addButton.innerHTML = "Add furniture Item"
+        addButton.addEventListener('click', () => renderAddfurnitureForm())
     document.getElementById('create-container').append(addButton)
-    let newFurniture = {
+    let newfurniture = {
         name: event.target.name.value,
         brand: event.target.brand.value,
         category: event.target.category.value,
@@ -111,22 +111,23 @@ function createFurniture(event) {
             "Accept": "application/json"
         },
         method: "POST",
-        body: JSON.stringify(newFurniture)
+        body: JSON.stringify(newfurniture)
     }
     fetch('http://localhost:3000/furnitures', reqPack)
         .then(resp => resp.json())
-        .then(furns => {
-            renderFurniture(furns)})
+        .then(clothes => {
+            CURRENT_USER.furnitures.push(clothes)
+            renderfurniture(clothes)})
 }
 
 function filterByCategory(cat) {
-    let filteredFurniture = CURRENT_USER.furnitures.filter(item => item.category === cat)
-    viewFurniture(filteredFurniture)
+    let filteredfurniture = CURRENT_USER.furnitures.filter(item => item.category === cat)
+    viewfurniture(filteredfurniture)
 }
 
 // UPDATE FUNCTIONS
 
-function renderEditFurnitureForm(furniture) {
+function renderEditfurnitureForm(furniture) {
     let form = document.createElement('form')
         form.addEventListener('submit', (event) => updateItem(event, furniture))
     let name = document.createElement('input')
@@ -161,6 +162,7 @@ function renderEditFurnitureForm(furniture) {
     let submit = document.createElement('input')
         submit.type = "submit"
     form.append(name, brand, category, color, image, submit)
+    document.getElementById(`furniture-${furniture.id}`).innerHTML = ""
     document.getElementById(`furniture-${furniture.id}`).append(form)
 }
 
@@ -188,7 +190,7 @@ function updateItem(event, furniture) {
         .then(resp => resp.json())
         .then(item => {
             document.getElementById(`furniture-${furniture.id}`).innerHTML = ""
-            renderFurniture(item)
+            renderfurniture(item)
         })
 }
 
@@ -200,5 +202,5 @@ function deleteItem(furniture) {
     
     CURRENT_USER.furnitures.splice(index, 1)
     
-    viewFurniture(CURRENT_USER.furnitures)
+    viewfurniture(CURRENT_USER.furnitures)
 }
