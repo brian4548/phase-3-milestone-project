@@ -3581,3 +3581,1178 @@ Processing by FurniturewishlistsController#index as HTML
 Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 2.2ms | Allocations: 6182)
 
 
+Started GET "/rooms" for ::1 at 2021-03-08 18:47:48 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/rooms"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/room" for ::1 at 2021-03-08 18:47:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/room"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/wishlists" for ::1 at 2021-03-08 18:48:02 -0500
+Processing by WishlistsController#index as HTML
+  [1m[36mWishlist Load (0.2ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists"[0m
+  ↳ app/controllers/wishlists_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 5.9ms | ActiveRecord: 0.6ms | Allocations: 8910)
+
+
+Started GET "/users" for ::1 at 2021-03-08 18:48:15 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mFurniture Load (0.1ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniture Destroy (0.2ms)[0m  [1m[31mDELETE FROM "furnitures" WHERE "furnitures"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniture Destroy (0.2ms)[0m  [1m[31mDELETE FROM "furnitures" WHERE "furnitures"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniture Destroy (0.2ms)[0m  [1m[31mDELETE FROM "furnitures" WHERE "furnitures"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniture Destroy (0.3ms)[0m  [1m[31mDELETE FROM "furnitures" WHERE "furnitures"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniture Destroy (0.8ms)[0m  [1m[31mDELETE FROM "furnitures" WHERE "furnitures"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniture Destroy (0.2ms)[0m  [1m[31mDELETE FROM "furnitures" WHERE "furnitures"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniture Destroy (0.3ms)[0m  [1m[31mDELETE FROM "furnitures" WHERE "furnitures"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniture Destroy (0.2ms)[0m  [1m[31mDELETE FROM "furnitures" WHERE "furnitures"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniture Destroy (0.2ms)[0m  [1m[31mDELETE FROM "furnitures" WHERE "furnitures"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniture Destroy (0.1ms)[0m  [1m[31mDELETE FROM "furnitures" WHERE "furnitures"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniture Destroy (0.1ms)[0m  [1m[31mDELETE FROM "furnitures" WHERE "furnitures"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniture Destroy (0.1ms)[0m  [1m[31mDELETE FROM "furnitures" WHERE "furnitures"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniture Destroy (0.1ms)[0m  [1m[31mDELETE FROM "furnitures" WHERE "furnitures"."id" = ?[0m  [["id", 13]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniture Destroy (0.1ms)[0m  [1m[31mDELETE FROM "furnitures" WHERE "furnitures"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mWishlist Load (0.2ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWishlist Destroy (0.2ms)[0m  [1m[31mDELETE FROM "wishlists" WHERE "wishlists"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWishlist Destroy (0.2ms)[0m  [1m[31mDELETE FROM "wishlists" WHERE "wishlists"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWishlist Destroy (0.1ms)[0m  [1m[31mDELETE FROM "wishlists" WHERE "wishlists"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWishlist Destroy (0.1ms)[0m  [1m[31mDELETE FROM "wishlists" WHERE "wishlists"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mFurniturewishlist Load (0.1ms)[0m  [1m[34mSELECT "furniturewishlists".* FROM "furniturewishlists"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniturewishlist Destroy (0.2ms)[0m  [1m[31mDELETE FROM "furniturewishlists" WHERE "furniturewishlists"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniturewishlist Destroy (0.1ms)[0m  [1m[31mDELETE FROM "furniturewishlists" WHERE "furniturewishlists"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniturewishlist Destroy (0.1ms)[0m  [1m[31mDELETE FROM "furniturewishlists" WHERE "furniturewishlists"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniturewishlist Destroy (0.1ms)[0m  [1m[31mDELETE FROM "furniturewishlists" WHERE "furniturewishlists"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniturewishlist Destroy (0.1ms)[0m  [1m[31mDELETE FROM "furniturewishlists" WHERE "furniturewishlists"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniturewishlist Destroy (0.1ms)[0m  [1m[31mDELETE FROM "furniturewishlists" WHERE "furniturewishlists"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniturewishlist Destroy (0.1ms)[0m  [1m[31mDELETE FROM "furniturewishlists" WHERE "furniturewishlists"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniturewishlist Destroy (0.1ms)[0m  [1m[31mDELETE FROM "furniturewishlists" WHERE "furniturewishlists"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniturewishlist Destroy (0.1ms)[0m  [1m[31mDELETE FROM "furniturewishlists" WHERE "furniturewishlists"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniturewishlist Destroy (0.1ms)[0m  [1m[31mDELETE FROM "furniturewishlists" WHERE "furniturewishlists"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFurniturewishlist Destroy (0.1ms)[0m  [1m[31mDELETE FROM "furniturewishlists" WHERE "furniturewishlists"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Brian"], ["created_at", "2021-03-08 23:50:46.737626"], ["updated_at", "2021-03-08 23:50:46.737626"]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Ebyan"], ["created_at", "2021-03-08 23:50:46.740615"], ["updated_at", "2021-03-08 23:50:46.740615"]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Bob"], ["created_at", "2021-03-08 23:50:46.742366"], ["updated_at", "2021-03-08 23:50:46.742366"]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mFurniture Load (0.1ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures"[0m
+  [1m[36mWishlist Load (0.1ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists"[0m
+  [1m[36mFurniturewishlist Load (0.1ms)[0m  [1m[34mSELECT "furniturewishlists".* FROM "furniturewishlists"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Brian"], ["created_at", "2021-03-09 14:18:14.777850"], ["updated_at", "2021-03-09 14:18:14.777850"]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Ebyan"], ["created_at", "2021-03-09 14:18:14.780909"], ["updated_at", "2021-03-09 14:18:14.780909"]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Bob"], ["created_at", "2021-03-09 14:18:14.782827"], ["updated_at", "2021-03-09 14:18:14.782827"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users/cyitw101@yahoo.com" for ::1 at 2021-03-09 09:27:55 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/Blaire" for ::1 at 2021-03-09 09:29:58 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/" for ::1 at 2021-03-09 09:31:03 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/" for ::1 at 2021-03-09 09:32:07 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/ebyan" for ::1 at 2021-03-09 09:32:12 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2021-03-09 14:32:12.957746"], ["updated_at", "2021-03-09 14:32:12.957746"]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 5.2ms | Allocations: 10098)
+
+
+  
+NoMethodError (undefined method `furnitures' for #<User:0x00007ff54ec02b78>):
+  
+app/controllers/users_controller.rb:4:in `show'
+Started GET "/users/ebyan" for ::1 at 2021-03-09 09:35:14 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.6ms | Allocations: 11370)
+
+
+  
+NameError (uninitialized constant Wishlist::Furnitureswishlist):
+  
+app/controllers/users_controller.rb:4:in `show'
+Started GET "/users/ebyan" for ::1 at 2021-03-09 09:36:08 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.7ms | Allocations: 6578)
+
+
+  
+NameError (uninitialized constant Wishlist::Furnitureswishlist):
+  
+app/controllers/users_controller.rb:4:in `show'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mWishlist Load (0.1ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ? LIMIT ?[0m  [["user_id", 7], ["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mWishlist Load (0.1ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ? LIMIT ?[0m  [["user_id", 7], ["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ? LIMIT ?[0m  [["user_id", 7], ["LIMIT", 11]]
+Started GET "/users/ebyan" for ::1 at 2021-03-09 09:40:16 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.1ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.1ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 26ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 15819)
+
+
+Started GET "/users/ebyan" for ::1 at 2021-03-09 09:40:51 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.4ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.2ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 2711)
+
+
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:06:40 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.6ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.2ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2765)
+
+
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:08:18 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.3ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.2ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 2711)
+
+
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:10:53 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.2ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 2711)
+
+
+Started POST "/rooms" for ::1 at 2021-03-09 10:11:05 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/rooms"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:17:22 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.3ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 2758)
+
+
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:18:41 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.3ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.2ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 2694)
+
+
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:23:25 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.1ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.1ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 2694)
+
+
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:23:53 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.2ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 2694)
+
+
+Started POST "/rooms" for ::1 at 2021-03-09 10:33:50 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [POST] "/rooms"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:34:49 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.9ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.6ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 22ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 2754)
+
+
+Started POST "/rooms" for ::1 at 2021-03-09 10:35:10 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/rooms"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:38:06 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.1ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.1ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 24ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 2693)
+
+
+Started POST "/rooms" for ::1 at 2021-03-09 10:38:15 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/rooms"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:40:15 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.3ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 23ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 2693)
+
+
+Started POST "/furniturewishlists" for ::1 at 2021-03-09 10:40:23 -0500
+Processing by FurniturewishlistsController#create as */*
+  Parameters: {"name"=>"living room", "type"=>"living room ", "user_id"=>10, "furniturewishlist"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.8ms | Allocations: 134)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: furniture_wishlist):
+  
+app/controllers/furniturewishlists_controller.rb:20:in `furniture_wishlist_params'
+app/controllers/furniturewishlists_controller.rb:8:in `create'
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:42:29 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.2ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 2697)
+
+
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:45:21 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.3ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.2ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 22ms (Views: 1.1ms | ActiveRecord: 0.8ms | Allocations: 2694)
+
+
+Started POST "/rooms" for ::1 at 2021-03-09 10:45:51 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/rooms"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:48:01 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.2ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 2693)
+
+
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:49:01 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.3ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.1ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 2694)
+
+
+Started POST "/wishlists" for ::1 at 2021-03-09 10:49:10 -0500
+Processing by WishlistsController#create as */*
+  Parameters: {"name"=>"my living room ", "type"=>"living room ", "user_id"=>10, "wishlist"=>{"name"=>"my living room ", "user_id"=>10}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[36mWishlist Create (0.8ms)[0m  [1m[32mINSERT INTO "wishlists" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "my living room "], ["user_id", 10], ["created_at", "2021-03-09 15:49:10.508040"], ["updated_at", "2021-03-09 15:49:10.508040"]]
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 1.8ms | Allocations: 8623)
+
+
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:49:49 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.3ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mFurniture Load (0.3ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" WHERE "furniturewishlists"."wishlist_id" = ?[0m  [["wishlist_id", 5]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 4219)
+
+
+Started POST "/wishlists" for ::1 at 2021-03-09 10:49:55 -0500
+Processing by WishlistsController#create as */*
+  Parameters: {"name"=>"cute", "type"=>"fancy", "user_id"=>10, "wishlist"=>{"name"=>"cute", "user_id"=>10}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[36mWishlist Create (1.3ms)[0m  [1m[32mINSERT INTO "wishlists" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "cute"], ["user_id", 10], ["created_at", "2021-03-09 15:49:55.994647"], ["updated_at", "2021-03-09 15:49:55.994647"]]
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 2.4ms | Allocations: 3722)
+
+
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:51:46 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.4ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.2ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" WHERE "furniturewishlists"."wishlist_id" = ?[0m  [["wishlist_id", 5]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" WHERE "furniturewishlists"."wishlist_id" = ?[0m  [["wishlist_id", 6]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 23ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 5008)
+
+
+Started POST "/wishlists" for ::1 at 2021-03-09 10:51:55 -0500
+Processing by WishlistsController#create as */*
+  Parameters: {"name"=>"idk", "type"=>"living room ", "user_id"=>10, "wishlist"=>{"name"=>"idk", "user_id"=>10}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[36mWishlist Create (1.3ms)[0m  [1m[32mINSERT INTO "wishlists" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "idk"], ["user_id", 10], ["created_at", "2021-03-09 15:51:55.586788"], ["updated_at", "2021-03-09 15:51:55.586788"]]
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+Completed 200 OK in 23ms (Views: 3.2ms | ActiveRecord: 2.6ms | Allocations: 3722)
+
+
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:53:03 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.2ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" WHERE "furniturewishlists"."wishlist_id" = ?[0m  [["wishlist_id", 5]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mFurniture Load (1.1ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" WHERE "furniturewishlists"."wishlist_id" = ?[0m  [["wishlist_id", 6]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mFurniture Load (0.1ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" WHERE "furniturewishlists"."wishlist_id" = ?[0m  [["wishlist_id", 7]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 25ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 6163)
+
+
+Started POST "/wishlists" for ::1 at 2021-03-09 10:53:09 -0500
+Processing by WishlistsController#create as */*
+  Parameters: {"name"=>"cute", "type"=>"living room ", "user_id"=>10, "wishlist"=>{"name"=>"cute", "user_id"=>10}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[36mWishlist Create (0.7ms)[0m  [1m[32mINSERT INTO "wishlists" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "cute"], ["user_id", 10], ["created_at", "2021-03-09 15:53:09.327967"], ["updated_at", "2021-03-09 15:53:09.327967"]]
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+Completed 200 OK in 43ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 3725)
+
+
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:53:39 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.3ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" WHERE "furniturewishlists"."wishlist_id" = ?[0m  [["wishlist_id", 5]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" WHERE "furniturewishlists"."wishlist_id" = ?[0m  [["wishlist_id", 6]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mFurniture Load (0.4ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" WHERE "furniturewishlists"."wishlist_id" = ?[0m  [["wishlist_id", 7]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mFurniture Load (0.1ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" WHERE "furniturewishlists"."wishlist_id" = ?[0m  [["wishlist_id", 8]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 25ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 7324)
+
+
+Started POST "/furnitures" for ::1 at 2021-03-09 10:53:56 -0500
+Processing by FurnituresController#create as JSON
+  Parameters: {"name"=>"cute", "brand"=>"soho", "category"=>"minimalist", "color"=>"brown", "image"=>"", "user_id"=>10, "furniture"=>{"name"=>"cute", "brand"=>"soho", "category"=>"minimalist", "color"=>"brown", "image"=>"", "user_id"=>10}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/furnitures_controller.rb:8:in `create'
+  [1m[36mFurniture Create (0.6ms)[0m  [1m[32mINSERT INTO "furnitures" ("name", "brand", "category", "color", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cute"], ["brand", "soho"], ["category", "minimalist"], ["color", "brown"], ["image", ""], ["created_at", "2021-03-09 15:53:56.075050"], ["updated_at", "2021-03-09 15:53:56.075050"]]
+  ↳ app/controllers/furnitures_controller.rb:8:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/furnitures_controller.rb:8:in `create'
+Completed 200 OK in 19ms (Views: 0.5ms | ActiveRecord: 1.3ms | Allocations: 9608)
+
+
+Started DELETE "/furnitures/15" for ::1 at 2021-03-09 10:53:58 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for FurnituresController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/furnitures" for ::1 at 2021-03-09 10:54:10 -0500
+Processing by FurnituresController#create as JSON
+  Parameters: {"name"=>"idk", "brand"=>"soho", "category"=>"bohemian", "color"=>"brown", "image"=>"", "user_id"=>10, "furniture"=>{"name"=>"idk", "brand"=>"soho", "category"=>"bohemian", "color"=>"brown", "image"=>"", "user_id"=>10}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/furnitures_controller.rb:8:in `create'
+  [1m[36mFurniture Create (1.0ms)[0m  [1m[32mINSERT INTO "furnitures" ("name", "brand", "category", "color", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "idk"], ["brand", "soho"], ["category", "bohemian"], ["color", "brown"], ["image", ""], ["created_at", "2021-03-09 15:54:10.626303"], ["updated_at", "2021-03-09 15:54:10.626303"]]
+  ↳ app/controllers/furnitures_controller.rb:8:in `create'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/furnitures_controller.rb:8:in `create'
+Completed 200 OK in 11ms (Views: 1.3ms | ActiveRecord: 2.9ms | Allocations: 2703)
+
+
+Started PATCH "/furnitures/16" for ::1 at 2021-03-09 10:54:17 -0500
+Processing by FurnituresController#update as JSON
+  Parameters: {"name"=>"idk", "brand"=>"soho", "category"=>"bohemian", "color"=>"yellow", "image"=>"", "id"=>"16", "furniture"=>{"name"=>"idk", "brand"=>"soho", "category"=>"bohemian", "color"=>"yellow", "image"=>""}}
+  [1m[36mFurniture Load (0.5ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" WHERE "furnitures"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/furnitures_controller.rb:13:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/furnitures_controller.rb:14:in `update'
+  [1m[36mFurniture Update (1.8ms)[0m  [1m[33mUPDATE "furnitures" SET "color" = ?, "updated_at" = ? WHERE "furnitures"."id" = ?[0m  [["color", "yellow"], ["updated_at", "2021-03-09 15:54:17.453023"], ["id", 16]]
+  ↳ app/controllers/furnitures_controller.rb:14:in `update'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/furnitures_controller.rb:14:in `update'
+Completed 200 OK in 13ms (Views: 0.7ms | ActiveRecord: 3.7ms | Allocations: 3450)
+
+
+Started POST "/furnitures" for ::1 at 2021-03-09 10:55:45 -0500
+Processing by FurnituresController#create as JSON
+  Parameters: {"name"=>"couch", "brand"=>"arhaus", "category"=>"minimalist", "color"=>"brown", "image"=>"", "user_id"=>10, "furniture"=>{"name"=>"couch", "brand"=>"arhaus", "category"=>"minimalist", "color"=>"brown", "image"=>"", "user_id"=>10}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/furnitures_controller.rb:8:in `create'
+  [1m[36mFurniture Create (0.5ms)[0m  [1m[32mINSERT INTO "furnitures" ("name", "brand", "category", "color", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "couch"], ["brand", "arhaus"], ["category", "minimalist"], ["color", "brown"], ["image", ""], ["created_at", "2021-03-09 15:55:45.460703"], ["updated_at", "2021-03-09 15:55:45.460703"]]
+  ↳ app/controllers/furnitures_controller.rb:8:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/furnitures_controller.rb:8:in `create'
+Completed 200 OK in 22ms (Views: 0.6ms | ActiveRecord: 1.4ms | Allocations: 2704)
+
+
+Started PATCH "/furnitures/17" for ::1 at 2021-03-09 10:55:51 -0500
+Processing by FurnituresController#update as JSON
+  Parameters: {"name"=>"couch", "brand"=>"arhaus", "category"=>"minimalist", "color"=>"yellow", "image"=>"", "id"=>"17", "furniture"=>{"name"=>"couch", "brand"=>"arhaus", "category"=>"minimalist", "color"=>"yellow", "image"=>""}}
+  [1m[36mFurniture Load (0.4ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" WHERE "furnitures"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/furnitures_controller.rb:13:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/furnitures_controller.rb:14:in `update'
+  [1m[36mFurniture Update (0.6ms)[0m  [1m[33mUPDATE "furnitures" SET "color" = ?, "updated_at" = ? WHERE "furnitures"."id" = ?[0m  [["color", "yellow"], ["updated_at", "2021-03-09 15:55:51.270940"], ["id", 17]]
+  ↳ app/controllers/furnitures_controller.rb:14:in `update'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/furnitures_controller.rb:14:in `update'
+Completed 200 OK in 11ms (Views: 0.7ms | ActiveRecord: 2.7ms | Allocations: 3233)
+
+
+Started POST "/furnitures" for ::1 at 2021-03-09 10:56:06 -0500
+Processing by FurnituresController#create as JSON
+  Parameters: {"name"=>"couch", "brand"=>"arhaus", "category"=>"bohemian", "color"=>"brown", "image"=>"", "user_id"=>10, "furniture"=>{"name"=>"couch", "brand"=>"arhaus", "category"=>"bohemian", "color"=>"brown", "image"=>"", "user_id"=>10}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/furnitures_controller.rb:8:in `create'
+  [1m[36mFurniture Create (1.0ms)[0m  [1m[32mINSERT INTO "furnitures" ("name", "brand", "category", "color", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "couch"], ["brand", "arhaus"], ["category", "bohemian"], ["color", "brown"], ["image", ""], ["created_at", "2021-03-09 15:56:06.826573"], ["updated_at", "2021-03-09 15:56:06.826573"]]
+  ↳ app/controllers/furnitures_controller.rb:8:in `create'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/furnitures_controller.rb:8:in `create'
+Completed 200 OK in 13ms (Views: 1.2ms | ActiveRecord: 2.5ms | Allocations: 2704)
+
+
+Started DELETE "/furnitures/18" for ::1 at 2021-03-09 10:56:11 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for FurnituresController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/wishlists" for ::1 at 2021-03-09 10:56:31 -0500
+Processing by WishlistsController#create as */*
+  Parameters: {"name"=>"cute", "type"=>"living room ", "user_id"=>10, "wishlist"=>{"name"=>"cute", "user_id"=>10}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[36mWishlist Create (0.9ms)[0m  [1m[32mINSERT INTO "wishlists" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "cute"], ["user_id", 10], ["created_at", "2021-03-09 15:56:31.481486"], ["updated_at", "2021-03-09 15:56:31.481486"]]
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+Completed 200 OK in 17ms (Views: 1.1ms | ActiveRecord: 2.6ms | Allocations: 3719)
+
+
+Started POST "/wishlists" for ::1 at 2021-03-09 10:56:40 -0500
+Processing by WishlistsController#create as */*
+  Parameters: {"name"=>"ebyan", "type"=>"test", "user_id"=>10, "wishlist"=>{"name"=>"ebyan", "user_id"=>10}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[36mWishlist Create (0.6ms)[0m  [1m[32mINSERT INTO "wishlists" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "ebyan"], ["user_id", 10], ["created_at", "2021-03-09 15:56:40.358970"], ["updated_at", "2021-03-09 15:56:40.358970"]]
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wishlists_controller.rb:9:in `create'
+Completed 200 OK in 11ms (Views: 0.6ms | ActiveRecord: 2.1ms | Allocations: 3720)
+
+
+Started GET "/users/ebyan" for ::1 at 2021-03-09 10:56:44 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"ebyan"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" INNER JOIN "wishlists" ON "furniturewishlists"."wishlist_id" = "wishlists"."id" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mWishlist Load (0.2ms)[0m  [1m[34mSELECT "wishlists".* FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mFurniture Load (0.4ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" WHERE "furniturewishlists"."wishlist_id" = ?[0m  [["wishlist_id", 5]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mFurniture Load (0.3ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" WHERE "furniturewishlists"."wishlist_id" = ?[0m  [["wishlist_id", 6]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" WHERE "furniturewishlists"."wishlist_id" = ?[0m  [["wishlist_id", 7]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mFurniture Load (0.2ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" WHERE "furniturewishlists"."wishlist_id" = ?[0m  [["wishlist_id", 8]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mFurniture Load (0.5ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" WHERE "furniturewishlists"."wishlist_id" = ?[0m  [["wishlist_id", 9]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[36mFurniture Load (0.3ms)[0m  [1m[34mSELECT "furnitures".* FROM "furnitures" INNER JOIN "furniturewishlists" ON "furnitures"."id" = "furniturewishlists"."furniture_id" WHERE "furniturewishlists"."wishlist_id" = ?[0m  [["wishlist_id", 10]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 200 OK in 29ms (Views: 0.1ms | ActiveRecord: 2.6ms | Allocations: 9633)
+
+
