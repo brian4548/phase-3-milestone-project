@@ -1,9 +1,9 @@
 let CURRENT_USER = ""
-let WISHLIST = CURRENT_USER.wishlists
-let FURNITURE = CURRENT_USER.furnitures
-let CATEGORIES_ARRAY = ['modern', 'minimalist', 'bohemian', 'rustic', 'farmhouse', 'glam']
+// let wishlistS = CURRENT_USER.wishlists
+// let furniture = CURRENT_USER.furnitures
+let CATEGORIES_ARRAY = ['chairs', 'couchs', 'tablse', 'tv stands', 'dresses', 'night stands', 'curtains', 'desks', 'bins', 'beds']
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", ()=> {
     userLogin()
 })
 
@@ -15,7 +15,7 @@ function userLogin() {
         .then(resp => resp.json())
         .then(user => {
             CURRENT_USER = user
-            document.querySelector('h1').innerHTML = `${user.username}'s Wishlist`
+            document.querySelector('h1').innerHTML = `${user.username}'s Room`
             renderUserPage(user)
         })
     })
@@ -24,15 +24,15 @@ function userLogin() {
 function renderUserPage(user) {
     let navbar = document.getElementById("navbar")
     let furnitureButton = document.createElement("button")
-        furnitureButton.innerHTML = "View Furniture"
+        furnitureButton.innerHTML = "View furniture"
         furnitureButton.classList.add('right')
         furnitureButton.classList.add('nav-buttons')
-        furnitureButton.addEventListener('click', () => viewFurniture(user.furnitures))
+        furnitureButton.addEventListener('click', () => viewfurniture(user.furnitures))
     let wishlistButton = document.createElement("button")
-        wishlistButton.innerHTML = "View Wishlists"
+        wishlistButton.innerHTML = "View wishlists"
         wishlistButton.classList.add('right')
         wishlistButton.classList.add('nav-buttons')
-        wishlistButton.addEventListener('click', () => viewWishlists(user.wishlists))
-    navbar.append(furnitureButton, wishlistButton)
+        wishlistButton.addEventListener('click', () => viewwishlists(user.wishlists))
+    navbar.append(wishlistButton, furnitureButton)
     document.getElementById("login").remove()
 }

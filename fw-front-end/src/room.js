@@ -1,116 +1,99 @@
-function viewWishlists(wishlists) {
+
+// READ FUNCTIONS
+
+function viewwishlists(wishlists) {
     document.getElementById('card-container').innerHTML = ""
     document.getElementById('create-container').innerHTML = ""
     document.getElementById('footer').innerHTML = ""
     let addButton = document.createElement('button')
-        addButton.innerHTML = "Add Wishlist"
-        addButton.addEventListener('click', () => renderAddWishlistForm())
+        addButton.innerHTML = "Add wishlist"
+        addButton.addEventListener('click', () => renderAddwishlistForm())
     document.getElementById('create-container').append(addButton)
-    wishlists.forEach(renderWishlists)
+    wishlists.forEach(renderwishlists)
     
 }
 
-function renderWishlists(wishlist) {
+function renderwishlists(wishlist) {
     let getLocation = document.querySelector("#card-container")
     let div = document.getElementById(`wishlist-${wishlist.id}`)
     let header = document.createElement("h2")
         header.innerHTML = wishlist.name
     let furnitureContainer = document.createElement('div')
+        furnitureContainer.classList.add("wishlist-images")
+    
     wishlist.furnitures.forEach(item => {
         let img = document.createElement('img')
             img.src = item.image
         furnitureContainer.append(img)
     })
-    let type = document.createElement('p')
-        type.innerHTML = wishlist.type
+    let season = document.createElement('p')
+        season.innerHTML = wishlist.season
+    let occasion = document.createElement('p')
+        occasion.innerHTML = wishlist.occasion
     let button1 = document.createElement("button")
-        button1.innerHTML = "Edit Item"
-        button1.addEventListener('click', () => renderEditWishlistForm(wishlist))
+        button1.innerHTML = "Edit wishlist"
+        button1.addEventListener('click', () => renderEditwishlistForm(wishlist))
     let button2 = document.createElement("button")
-        button2.innerHTML = "Delete Item"
-        button2.addEventListener('click', () => deleteWishlist(wishlist))
+        button2.innerHTML = "Delete wishlist"
+        button2.addEventListener('click', () => deletewishlist(wishlist))
     if (div) {
-            div.append(header, furnitureContainer, type, button1, button2)
+            div.innerHTML = ""
+            div.append(header, furnitureContainer, season, occasion, button1, button2)
     } else {
             div = document.createElement("div")
             div.id = `wishlist-${wishlist.id}`
-            div.classList.add("card")
-            div.append(header, furnitureContainer, type, button1, button2)
+            div.classList.add("wishlist-card")
+            div.append(header, furnitureContainer, season, occasion, button1, button2)
             getLocation.append(div)
     }
 }
 
 // CREATE FUNCTIONS 
 
-function renderAddWishlistForm() {
+function renderAddwishlistForm() {
     let container = document.getElementById('create-container')
         container.innerHTML = ""
     let form = document.createElement('form')
         form.id = "create-wishlist-form"
-        form.addEventListener('submit', (event)=> createWishlist(event))
+        form.addEventListener('submit', (event)=> createwishlist(event))
     let name = document.createElement('input')
         name.type = "text"   
         name.name = "name"
         name.placeholder = "wishlist name"
-    let type = document.createElement('input')
-        type.type = "text"
-        type.name = "type"
-        type.placeholder = "type"
-    let furniture = document.createElement('select')
-        furniture.name = "furnitureId"
-        furniture.setAttribute("multiple", true)
-        let placeholder = document.createElement('option')
-            placeholder.innerHTML = "furniture"
-            placeholder.setAttribute("disabled", true)
-            placeholder.setAttribute("selected", true)
-            placeholder.setAttribute("hidden", true)
-        furniture.append(placeholder)
-        CURRENT_USER.furnitures.forEach(item => {
-            let option = document.createElement('option')
-                option.value = item.id
-                option.innerHTML = item.name
-                furniture.append(option)
-        })
-    let plus = document.createElement('button')
-        plus.innerHTML = "+"
-        plus.addEventListener('click', () => addFurnitureInput())
+    let season = document.createElement('input')
+        season.type = "text"
+        season.name = "season"
+        season.placeholder = "season"
+    let occasion = document.createElement('input')
+        occasion.type = "text"
+        occasion.name = "occasion"
+        occasion.placeholder = "occasion"
+    let furnitureDiv = document.createElement('div')
+    CURRENT_USER.furnitures.forEach(item => {
+        let furnitureOption = document.createElement('input')
+            furnitureOption.type = "checkbox"
+            furnitureOption.id = item.id
+            furnitureOption.value = item.id
+            furnitureOption.name = `furniture-${item.id}`
+        let furnitureLabel = document.createElement('label')
+            furnitureLabel.for = item.id
+            furnitureLabel.innerHTML = item.name
+        let br = document.createElement('br')
+            furnitureDiv.append(furnitureOption, furnitureLabel, br)
+    })
     let submit = document.createElement('input')
         submit.type = "submit"
-    form.append(name, type, furniture, submit)
+    form.append(name, season, occasion, furnitureDiv, submit)
     container.append(form)
 }
 
-function addFurnitureInput() {
-    let furniture = document.createElement('select')
-        furniture.name = "furnitureId"
-        let placeholder = document.createElement('option')
-            placeholder.innerHTML = "furniture"
-            placeholder.setAttribute("disabled", true)
-            placeholder.setAttribute("selected", true)
-            placeholder.setAttribute("hidden", true)
-        furniture.append(placeholder)
-        CURRENT_USER.furnitures.forEach(item => {
-            let option = document.createElement('option')
-                option.value = item.id
-                option.innerHTML = item.name
-                furniture.append(option)
-        })
-    let plus = document.createElement('button')
-        plus.innerHTML = "+"
-        plus.addEventListener('click', () => addFurnitureInput())
-    document.getElementById('create-wishlist-form').append(furniture, plus)
-}
-
-function createWishlist(event) {
+function createwishlist(event) {
     event.preventDefault()
-    document.getElementById('create-container').innerHTML = ""
-    let addButton = document.createElement('button')
-        addButton.innerHTML = "Add Wishlist"
-        addButton.addEventListener('click', () => renderAddWishlistForm())
-    document.getElementById('create-container').append(addButton)
-    let newWishlist = {
+    
+    let newwishlist = {
         name: event.target.name.value,
-        type: event.target.type.value,
+        season: event.target.season.value,
+        occasion: event.target.occasion.value,
         user_id: CURRENT_USER.id
     }
 
@@ -119,85 +102,106 @@ function createWishlist(event) {
             "Content-Type": "application/json"
         },
         method: "POST",
-        body: JSON.stringify(newWishlist)
+        body: JSON.stringify(newwishlist)
     }
 
     fetch('http://localhost:3000/wishlists', reqPack)
         .then(r => r.json())
         .then(wishlist =>  {
             CURRENT_USER.wishlists.push(wishlist)
-            
-            let furnitures = [CURRENT_USER.furnitures.find(item => {return item.id === parseInt(event.target.furnitureId.value)})]
-            furnitures.forEach(furniture => createFurnitureWishlist(furniture, wishlist))
+            let arrayOfItems = []
+            let checkboxes = document.querySelectorAll("input[type='checkbox']");
+                checkboxes.forEach(box => {
+                    if (box.checked) {
+                        let item = CURRENT_USER.furnitures.find(item => item.id === parseInt(box.id))
+                        arrayOfItems.push(item)
+                    }
+            })
+            let newwishlist = CURRENT_USER.wishlists[CURRENT_USER.wishlists.length - 1]
+            newwishlist.furnitures = []
+            createwishlistfurniture(arrayOfItems, newwishlist)
+        
+    document.getElementById('create-container').innerHTML = ""
+    let addButton = document.createElement('button')
+        addButton.innerHTML = "Add wishlist"
+        addButton.addEventListener('click', () => renderAddwishlistForm())
+    document.getElementById('create-container').append(addButton)
         })
 }
 
-function createFurnitureWishlist(furniture, wishlist) {
-    let newFurnitureWishlist = {
-        furniture_id: furniture.id,
-        wishlist_id: wishlist.id
-    }
-    
-    let reqPack = {
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        },
-        method: "POST",
-        body: JSON.stringify(newFurnitureWishlist)
-    }
+async function createwishlistfurniture(arrayOfItems, wishlist) {
+    if (arrayOfItems.length > 0) {
+        let newwishlistfurniture = {
+            furniture_id: arrayOfItems[0].id,
+            wishlist_id: wishlist.id
+        }
 
-    fetch('http://localhost:3000/furniturewishlists', reqPack)
-        .then(resp => resp.json())
-        .then(data => {
-            let wishlist = CURRENT_USER.wishlists.find(wishlist => wishlist.id === data.wishlist_id)
-            let furniture = CURRENT_USER.furnitures.find(item => item.id === data.furniture_id)
-            wishlist.furnitures = [furniture]
-            renderWishlists(wishlist)
-        })
+        let reqPack = {
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            method: "POST",
+            body: JSON.stringify(newwishlistfurniture)
+        }
+
+        let resp = await fetch('http://localhost:3000/wishlist_furnitures', reqPack)
+        let data = await resp.json()
+        wishlist.furnitures.push(arrayOfItems[0])
+        arrayOfItems.shift()
+        createwishlistfurniture(arrayOfItems, wishlist)
+    } else {
+        renderwishlists(wishlist)
+    }      
 }
 
 // UPDATE FUNCTIONS
 
-function renderEditWishlistForm(wishlist) {
+function renderEditwishlistForm(wishlist) {
     let form = document.createElement('form')
-        form.addEventListener('submit', (event) => updateWishlist(event, wishlist))
+        form.addEventListener('submit', (event) => updatewishlist(event, wishlist))
     let name = document.createElement('input')
         name.type = "text"
         name.name = "name"
-        name.value = outfit.name
-    let type = document.createElement('input')
-        type.type = "text"
-        type.name = "type"
-        type.value = wishlist.type
-
-    let furniture = document.createElement('select')
-       furniture.name = "furniture"
-        let placeholder = document.createElement('option')
-            placeholder.innerHTML = "furniture"
-            placeholder.setAttribute("disabled", true)
-            placeholder.setAttribute("selected", true)
-            placeholder.setAttribute("hidden", true)
-        furniture.append(placeholder)
-        CURRENT_USER.furnitures.forEach(item => {
-            let option = document.createElement('option')
-                option.value = item
-                option.innerHTML = item.name
-                furniture.append(option)
+        name.value = wishlist.name
+    let season = document.createElement('input')
+        season.type = "text"
+        season.name = "season"
+        season.value = wishlist.season
+    let occasion = document.createElement('input')
+        occasion.type = "text"
+        occasion.name = "occasion"
+        occasion.value = wishlist.occasion
+    let furnitureDiv = document.createElement('div')
+    CURRENT_USER.furnitures.forEach(item => {
+        let furnitureOption = document.createElement('input')
+            furnitureOption.type = "checkbox"
+            furnitureOption.id = item.id
+            furnitureOption.value = item.id
+            furnitureOption.name = `furniture-${item.id}`
+        let furnitureLabel = document.createElement('label')
+            furnitureLabel.for = item.id
+            furnitureLabel.innerHTML = item.name
+        let br = document.createElement('br')
+        furnitureDiv.append(furnitureOption, furnitureLabel, br)
         })
     let submit = document.createElement('input')
         submit.type = "submit"
-    form.append(name, type, furniture, submit)
+    form.append(name, season, occasion, furnitureDiv, submit)
+    document.getElementById(`wishlist-${wishlist.id}`).innerHTML = ""
     document.getElementById(`wishlist-${wishlist.id}`).append(form)
 }
 
-function updateWishlist(event, wishlist) {
+function updatewishlist(event, originalwishlist) {
     event.preventDefault()
 
-    let updatedWishlist = {
+    let originalfurnitures = []
+        originalwishlist.furnitures.forEach(item => originalfurnitures.push(item))
+
+    let editedwishlist = {
         name: event.target.name.value,
-        type: event.target.type.value,
-        
+        season: event.target.season.value,
+        occasion: event.target.occasion.value,
     }
 
     let reqPack = {
@@ -206,22 +210,65 @@ function updateWishlist(event, wishlist) {
             "Accept": "application/json"
         },
         method: "PATCH",
-        body: JSON.stringify(updatedWishlist)
+        body: JSON.stringify(editedwishlist)
     }
 
-    fetch(`http://localhost:3000/wishlists/${wishlist.id}`, reqPack)
+    fetch(`http://localhost:3000/wishlists/${originalwishlist.id}`, reqPack)
         .then(resp => resp.json())
-        .then(item => {
-            document.getElementById(`wishlist-${wishlist.id}`).innerHTML = ""
-            renderWishlists(item)
+        .then(updatedwishlist => {
+    
+            let updatedfurniture = []
+            let checkboxes = document.querySelectorAll("input[type='checkbox']")
+                checkboxes.forEach(box => {
+                    if (box.checked) {
+                        updatedfurniture.push(box)
+                    }
+            })
+            updatedwishlist.furnitures = []
+            updatedfurniture.forEach(input => {
+                let item = CURRENT_USER.furnitures.find(item => item.id === parseInt(input.id))
+                updatedwishlist.furnitures.push(item)
+            })
+            // debugger
+            renderwishlists(updatedwishlist)
+            updatedfurniture.forEach(newItem => {
+                originalfurnitures.forEach(oldItem => {
+                    if (parseInt(newItem.id) === oldItem.id) {
+                        let index = updatedfurniture.indexOf(newItem)
+                        updatedfurniture.splice(index, 1)
+                        let otherIndex = originalfurnitures.indexOf(oldItem)
+                        originalfurnitures.splice(otherIndex, 1)
+                    }
+                })
+            //what's left in updatedfurniture needs to create
+            // debugger
+            updatedfurniture.forEach(item => createwishlistfurniture(item, updatedwishlist))
+            //what's left in originalfurniture needs to delete
+            originalfurnitures.forEach(item => deletewishlistfurniture(item, updatedwishlist))
+            
+            })
         })
 }
 
 // DELETE FUNCTIONS
 
-function deleteWishlist(wishlist) {
+function deletewishlist(wishlist) {
     fetch(`http://localhost:3000/wishlists/${wishlist.id}`, {method: "DELETE"})
     let index = CURRENT_USER.wishlists.indexOf(wishlist)
     CURRENT_USER.wishlists.splice(index, 1)
-    viewWishlists(CURRENT_USER.wishlists)
+    viewwishlists(CURRENT_USER.wishlists)
+}
+
+function deletewishlistfurniture(item, wishlist) {
+
+    fetch(`http://localhost:3000/wishlist_furnitures`)
+        .then(resp => resp.json())
+        .then(joiners => {
+            let toDelete = joiners.find(joiner => joiner.furniture_id === item.id && joiner.wishlist_id === wishlist.id)
+            fetch(`http://localhost:3000/wishlist_furnitures/${toDelete.id}`, {method: "DELETE"})
+        })
+
+    
+
+    // figure out how to get rid of those rendered images
 }

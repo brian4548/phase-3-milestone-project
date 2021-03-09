@@ -1,8 +1,8 @@
 class FurnituresController < ApplicationController
-    def index
-        furnitures = Furniture.all 
-        render json: furnitures, except: [:created_at, :updated_at]
-    end
+    # def index
+    #     clothings = Clothing.all 
+    #     render json: clothings, except: [:created_at, :updated_at]
+    # end
 
     def create
         new_item = Furniture.create(furniture_params)
@@ -23,6 +23,6 @@ class FurnituresController < ApplicationController
     private
 
     def furniture_params
-        params.require(:furniture).permit(:name, :brand, :category, :color, :image, :type, :price)
+        params.require(:furniture).permit(:name, :brand, :category, :color, :image, :user_id)
     end
 end
