@@ -123,6 +123,7 @@ function createfurniture(event) {
 function filterByCategory(cat) {
     let filteredfurniture = CURRENT_USER.furnitures.filter(item => item.category === cat)
     viewfurniture(filteredfurniture)
+  
 }
 
 // UPDATE FUNCTIONS

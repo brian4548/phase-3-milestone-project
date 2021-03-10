@@ -6,7 +6,7 @@ function viewwishlists(wishlists) {
     document.getElementById('create-container').innerHTML = ""
     document.getElementById('footer').innerHTML = ""
     let addButton = document.createElement('button')
-        addButton.innerHTML = "Add wishlist"
+        addButton.innerHTML = "Add Room"
         addButton.addEventListener('click', () => renderAddwishlistForm())
     document.getElementById('create-container').append(addButton)
     wishlists.forEach(renderwishlists)
@@ -31,10 +31,10 @@ function renderwishlists(wishlist) {
     let occasion = document.createElement('p')
         occasion.innerHTML = wishlist.occasion
     let button1 = document.createElement("button")
-        button1.innerHTML = "Edit wishlist"
+        button1.innerHTML = "Edit Room"
         button1.addEventListener('click', () => renderEditwishlistForm(wishlist))
     let button2 = document.createElement("button")
-        button2.innerHTML = "Delete wishlist"
+        button2.innerHTML = "Delete Room"
         button2.addEventListener('click', () => deletewishlist(wishlist))
     if (div) {
             div.innerHTML = ""
@@ -59,15 +59,15 @@ function renderAddwishlistForm() {
     let name = document.createElement('input')
         name.type = "text"   
         name.name = "name"
-        name.placeholder = "wishlist name"
+        name.placeholder = "Wishlist name"
     let season = document.createElement('input')
         season.type = "text"
         season.name = "season"
-        season.placeholder = "season"
+        season.placeholder = "Room"
     let occasion = document.createElement('input')
         occasion.type = "text"
         occasion.name = "occasion"
-        occasion.placeholder = "occasion"
+        occasion.placeholder = "Style"
     let furnitureDiv = document.createElement('div')
     CURRENT_USER.furnitures.forEach(item => {
         let furnitureOption = document.createElement('input')
@@ -123,7 +123,7 @@ function createwishlist(event) {
         
     document.getElementById('create-container').innerHTML = ""
     let addButton = document.createElement('button')
-        addButton.innerHTML = "Add wishlist"
+        addButton.innerHTML = "Add Room"
         addButton.addEventListener('click', () => renderAddwishlistForm())
     document.getElementById('create-container').append(addButton)
         })

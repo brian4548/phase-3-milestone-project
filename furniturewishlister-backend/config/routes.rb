@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   post "/furnitures", to: "furnitures#create"
   delete "/furnitures/:id", to: "furnitures#delete"
   patch "/furnitures/:id", to: "furnitures#update"
-  # get "/users", to: "users#index"
+  get "/users", to: "users#index"
   get "/users/:username", to: "users#show"
   get "/wishlists", to: "wishlists#index"
   post "/wishlists", to: "wishlists#create"

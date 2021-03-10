@@ -1,7 +1,7 @@
 let CURRENT_USER = ""
 // let wishlistS = CURRENT_USER.wishlists
 // let furniture = CURRENT_USER.furnitures
-let CATEGORIES_ARRAY = ['chairs', 'couchs', 'tablse', 'tv stands', 'dresses', 'night stands', 'curtains', 'desks', 'bins', 'beds']
+let CATEGORIES_ARRAY = ['chairs', 'couches', 'tables', 'lamps']
 
 document.addEventListener("DOMContentLoaded", ()=> {
     userLogin()
